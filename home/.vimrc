@@ -83,7 +83,7 @@ autocmd!
 " autoindent with two spaces, always expand tabs
 autocmd FileType ruby,eruby,yaml set autoindent shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 autocmd FileType python,cs set autoindent shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType javascript,html,htmldjango,css set autoindent shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType javascript,html,htmldjango,css,jade set autoindent shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType vim set autoindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType cucumber set autoindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType puppet set autoindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
@@ -100,7 +100,6 @@ au BufRead,BufNewFile *.god set ft=ruby
 au BufRead,BufNewFile .caprc set ft=ruby
 au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
-
 
 " golang maps
 au FileType go nmap <Leader>gd <Plug>(go-doc)
@@ -129,6 +128,7 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType jade set omnifunc=jadecomplete#CompleteJade
 
  " Tab navigation
 nmap <leader>tn :tabnext<CR>
